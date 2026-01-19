@@ -6,17 +6,17 @@ from typing import FrozenSet
 
 @dataclass(frozen=True)
 class ForensicConfig:
-    """
-    Central configuration object.
 
-    Specifies the constraints within which the agent operates on the HOST OS Filesystem:
-    - allow-listed root
-    - read-only evidence handling
-    - no symlinks
-    - size limit
-    - specific file types
-    - outputs: ZIP, SQLite manifest, CSV, audit log
-    """
+    # Central configuration object.
+    #
+    # Specifies the constraints within which the agent operates on the HOST OS Filesystem:
+    # allow-listed root
+    # read-only evidence handling
+    # no symlinks
+    # size limit
+    # specific file types
+    #  outputs: ZIP, SQLite manifest, CSV, audit log
+    #"""
     allowed_root: Path = Path.home() / "digital_agent_source_files"  # set to your allowed evidence root
     allowed_extensions: FrozenSet[str] = frozenset({".pdf", ".doc", ".docx", ".txt",".jpg","png"}) #allowed file extensions
     max_file_size_bytes: int = 50 * 1024 * 1024  # 50MB

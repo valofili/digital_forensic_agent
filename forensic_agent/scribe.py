@@ -10,6 +10,8 @@ from forensic_agent.models import StoredEvidence
 
 
 class Scribe:
+   #Scribe Agent
+
     """
     Reactive agent which performs reporting responsibilities: CSV export of path/type/hash, validation: CSV rows match SQLite manifest entries, operator summary output
     """

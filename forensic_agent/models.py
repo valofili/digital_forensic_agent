@@ -3,7 +3,7 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Optional
 
-
+#Class holding data model for storing File state, hashResult, Copy of Evidence, Report Summary
 @dataclass(frozen=True)
 class FileMatch:
     path: Path
