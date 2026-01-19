@@ -3,6 +3,18 @@ from forensic_agent.coordinator import CoordinatorAgent
 
 
 def main() -> None:
+    """
+    Entry point for the digital forensic agent system.
+
+    This function performs minimal orchestration:
+    1.Ensures the forensic output directory exists
+    2.Instantiates the CoordinatorAgent with system configuration
+    3.Initiates a single end-to-end forensic acquisition run
+    4.Prints a validated summary of results and artefacts produced
+
+    The CoordinatorAgent internally manages all agent interactions,
+    sequencing, and decision-making logic.
+    """
     # Ensure output directory exists
     ForensicConfig.output_dir.mkdir(parents=True, exist_ok=True)
 
@@ -24,4 +36,7 @@ def main() -> None:
 
 
 if __name__ == "__main__":
+    """
+    Guard clause to ensure the forensic system is executed only as a script
+    """
     main()
